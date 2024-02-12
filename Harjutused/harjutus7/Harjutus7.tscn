@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs02jihll1u4c"]
+
+[ext_resource type="Script" path="res://harjutus7/Harjutus7.gd" id="1_twebt"]
+[ext_resource type="Texture2D" uid="uid://m3ojvc4fi5ta" path="res://harjutus7/bg2.webp" id="2_8eyiu"]
+
+[sub_resource type="FontVariation" id="FontVariation_d2sxi"]
+
+[sub_resource type="FontVariation" id="FontVariation_tf8av"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_twebt")
+
+[node name="taustapilt" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_8eyiu")
+
+[node name="piu" type="RichTextLabel" parent="taustapilt"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 12.0
+offset_right = 219.0
+offset_bottom = 52.0
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+text_direction = 1
+
+[node name="score" type="RichTextLabel" parent="taustapilt"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 0
+offset_left = 824.0
+offset_top = 15.0
+offset_right = 1074.0
+offset_bottom = 55.0
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+scroll_active = false
+
+[node name="ammo" type="RichTextLabel" parent="taustapilt"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 522.0
+offset_right = 294.0
+offset_bottom = 562.0
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+scroll_active = false
+
+[node name="gameover" type="RichTextLabel" parent="taustapilt"]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 103.0
+offset_right = 1051.0
+offset_bottom = 183.0
+theme_override_colors/default_color = Color(0.909804, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 80
+fit_content = true
+scroll_active = false
+
+[node name="elud" type="RichTextLabel" parent="taustapilt"]
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 829.0
+offset_top = 519.0
+offset_right = 1229.0
+offset_bottom = 559.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_d2sxi")
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+scroll_active = false
+
+[node name="reload" type="RichTextLabel" parent="taustapilt"]
+custom_minimum_size = Vector2(40, 40)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.0
+offset_top = 35.0
+offset_right = 351.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_tf8av")
+theme_override_font_sizes/normal_font_size = 34
+fit_content = true
+scroll_active = false
