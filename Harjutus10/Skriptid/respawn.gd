@@ -1,6 +1,6 @@
-extends Node
+extends Area2D
 
-var elud = 3
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,15 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
-
-
-func elu():
-	
-	
-	
-	
-	
-	if elud == 0:
-		$taustapilt/gameover.text = "Elu said otsa!! Mäng läbi!\n      Mäng läheb pausile"
-		get_tree().paused = true
+func _on_Area2D_body_entered(body):
+	if "Player" in body.trap:
+	   Player.respawn()

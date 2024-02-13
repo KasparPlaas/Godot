@@ -1,9 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://ch3rvueso78nt"]
+[gd_scene load_steps=18 format=3 uid="uid://ch3rvueso78nt"]
 
 [ext_resource type="Texture2D" uid="uid://b24fngj3evdnl" path="res://Objektid/Pad_02_1.png" id="1_48qit"]
 [ext_resource type="Texture2D" uid="uid://b7jdo7jhsd3t" path="res://Objektid/Pad_02_2.png" id="2_4iwpx"]
 [ext_resource type="Texture2D" uid="uid://brmjsijmyabcr" path="res://Objektid/win.png" id="3_451fo"]
-[ext_resource type="Texture2D" uid="uid://04vmndruuih0" path="res://Objektid/coin.png" id="4_kj63x"]
+[ext_resource type="Script" path="res://Skriptid/respawn.gd" id="4_y25b4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e364j"]
 size = Vector2(854.279, 101.98)
@@ -16,9 +16,6 @@ size = Vector2(210, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrrm6"]
 size = Vector2(778.494, 142.344)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0g0p"]
-size = Vector2(835.774, 96.4732)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qym4t"]
 size = Vector2(225, 38)
@@ -41,17 +38,11 @@ size = Vector2(1742.48, 208.576)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndgsw"]
 size = Vector2(39, 39)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rbpws"]
-radius = 263.779
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y15y5"]
+size = Vector2(237.5, 28)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g6e0y"]
-radius = 272.394
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_blbym"]
-radius = 268.658
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_oenu8"]
-radius = 268.658
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlirr"]
+size = Vector2(1681.22, 10.6308)
 
 [node name="Maapind" type="Node2D"]
 
@@ -100,11 +91,6 @@ texture = ExtResource("2_4iwpx")
 position = Vector2(670, 413.715)
 scale = Vector2(0.256906, 0.256906)
 shape = SubResource("RectangleShape2D_rrrm6")
-
-[node name="trap" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(665.642, 375.392)
-scale = Vector2(0.256906, 0.256906)
-shape = SubResource("RectangleShape2D_j0g0p")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 
@@ -197,44 +183,15 @@ position = Vector2(21, -7)
 scale = Vector2(0.108571, 0.108571)
 texture = ExtResource("3_451fo")
 
-[node name="coins" type="StaticBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_y25b4")
 
-[node name="Coin" type="Sprite2D" parent="coins"]
-position = Vector2(830, 123)
-scale = Vector2(0.0588531, 0.0588531)
-texture = ExtResource("4_kj63x")
+[node name="trap" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(650.75, 373)
+shape = SubResource("RectangleShape2D_y15y5")
 
-[node name="Coin2" type="Sprite2D" parent="coins"]
-position = Vector2(892, 123)
-scale = Vector2(0.0588531, 0.0588531)
-texture = ExtResource("4_kj63x")
-
-[node name="Coin3" type="Sprite2D" parent="coins"]
-position = Vector2(950, 122)
-scale = Vector2(0.0588531, 0.0588531)
-texture = ExtResource("4_kj63x")
-
-[node name="Coin4" type="Sprite2D" parent="coins"]
-position = Vector2(1009, 122)
-scale = Vector2(0.0588531, 0.0588531)
-texture = ExtResource("4_kj63x")
-
-[node name="coin4" type="CollisionShape2D" parent="coins"]
-position = Vector2(1009, 122)
-scale = Vector2(0.0588531, 0.0588531)
-shape = SubResource("CircleShape2D_rbpws")
-
-[node name="coin2" type="CollisionShape2D" parent="coins"]
-position = Vector2(892, 123)
-scale = Vector2(0.0588531, 0.0588531)
-shape = SubResource("CircleShape2D_g6e0y")
-
-[node name="coin" type="CollisionShape2D" parent="coins"]
-position = Vector2(830, 123)
-scale = Vector2(0.0588531, 0.0588531)
-shape = SubResource("CircleShape2D_blbym")
-
-[node name="coin3" type="CollisionShape2D" parent="coins"]
-position = Vector2(950, 122)
-scale = Vector2(0.0588531, 0.0588531)
-shape = SubResource("CircleShape2D_oenu8")
+[node name="mapall" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-78, 666.147)
+rotation = -3.14159
+scale = Vector2(3.07395, 3.17068)
+shape = SubResource("RectangleShape2D_wlirr")
