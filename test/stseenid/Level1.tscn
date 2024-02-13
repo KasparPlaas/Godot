@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://83y1asvlmmrf"]
+
+[ext_resource type="PackedScene" uid="uid://dk8tq438hnxoj" path="res://stseenid/player.tscn" id="1_i20ye"]
+[ext_resource type="PackedScene" uid="uid://wqjo68y380q6" path="res://stseenid/maapind.tscn" id="2_qbnff"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_i20ye")]
+
+[node name="Maapind" parent="." instance=ExtResource("2_qbnff")]

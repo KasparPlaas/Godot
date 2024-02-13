@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwcqgdj83kfaa"]
+
+[ext_resource type="Texture2D" uid="uid://6eb7qdjroomr" path="res://Taust/Summer7.png" id="1_3ubfr"]
+
+[node name="Taust" type="Node2D"]
+
+[node name="Summer7" type="Sprite2D" parent="."]
+position = Vector2(577.333, 324.5)
+scale = Vector2(0.497685, 0.497685)
+texture = ExtResource("1_3ubfr")

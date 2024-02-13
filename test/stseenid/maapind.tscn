@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://wqjo68y380q6"]
+
+[ext_resource type="Texture2D" uid="uid://crvfirc6w5c1" path="res://taust/pind.jpg" id="1_v6830"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_327fw"]
+size = Vector2(63.9999, 64.0105)
+
+[node name="Maapind" type="Node2D"]
+
+[node name="Maapind" type="StaticBody2D" parent="."]
+position = Vector2(-64, 0)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind2" type="StaticBody2D" parent="."]
+position = Vector2(320, -128)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind2"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind2"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind3" type="StaticBody2D" parent="."]
+position = Vector2(128, 0)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind3"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind3"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind4" type="StaticBody2D" parent="."]
+position = Vector2(258.566, -64)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind4"]
+position = Vector2(349.434, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind4"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind5" type="StaticBody2D" parent="."]
+position = Vector2(192, 0)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind5"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind5"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind6" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind6"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind6"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")
+
+[node name="Maapind7" type="StaticBody2D" parent="."]
+position = Vector2(-128, 0)
+metadata/_edit_group_ = true
+
+[node name="pind" type="Sprite2D" parent="Maapind7"]
+position = Vector2(352, 544)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_v6830")
+
+[node name="Kokkupuude" type="CollisionShape2D" parent="Maapind7"]
+position = Vector2(351.292, 544.583)
+shape = SubResource("RectangleShape2D_327fw")

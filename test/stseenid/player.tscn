@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk8tq438hnxoj"]
+
+[ext_resource type="Script" path="res://Skriptid/player.gd" id="1_pkhmh"]
+[ext_resource type="Texture2D" uid="uid://dnq72dxo3obng" path="res://Player/idle/0001.png" id="1_pty3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0iry"]
+size = Vector2(42, 13)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(45, -37)
+slide_on_ceiling = false
+script = ExtResource("1_pkhmh")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(259, 449)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_pty3o")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(289, 505.5)
+shape = SubResource("RectangleShape2D_o0iry")

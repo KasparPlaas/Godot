@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Harjutused"
-run/main_scene="res://Harjutus8/Harjutus8.tscn"
+run/main_scene="res://harjutus7/Harjutus7.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
