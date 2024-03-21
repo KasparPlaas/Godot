@@ -9,16 +9,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-
-
-func elu():
-	
-	
-	
-	
-	
-	if elud == 0:
-		$taustapilt/gameover.text = "Elu said otsa!! Mäng läbi!\n      Mäng läheb pausile"
-		get_tree().paused = true

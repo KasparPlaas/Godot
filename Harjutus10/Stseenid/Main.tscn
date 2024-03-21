@@ -1,32 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://navx1cpch65g"]
+[gd_scene load_steps=8 format=3 uid="uid://navx1cpch65g"]
 
 [ext_resource type="PackedScene" uid="uid://cdwrfv28ji7d7" path="res://Stseenid/Player.tscn" id="1_8rgng"]
+[ext_resource type="Script" path="res://Stseenid/Main.gd" id="1_gk73o"]
 [ext_resource type="PackedScene" uid="uid://bwcqgdj83kfaa" path="res://Stseenid/taust.tscn" id="2_j3v8k"]
 [ext_resource type="PackedScene" uid="uid://ch3rvueso78nt" path="res://Stseenid/Maapind.tscn" id="3_v3hcv"]
-[ext_resource type="Script" path="res://Skriptid/Main.gd" id="4_bt4qs"]
-[ext_resource type="Script" path="res://Skriptid/respawn.gd" id="5_20h8r"]
+[ext_resource type="Script" path="res://Stseenid/Player.gd" id="5_ksch6"]
+[ext_resource type="Script" path="res://Stseenid/collision.gd" id="6_syt8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cosqf"]
+size = Vector2(164, 199.5)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("4_bt4qs")
+script = ExtResource("1_gk73o")
 
 [node name="Taust" parent="." instance=ExtResource("2_j3v8k")]
 position = Vector2(-2, -3)
 
 [node name="Maapind" parent="." instance=ExtResource("3_v3hcv")]
+position = Vector2(28, 43)
 
 [node name="Player" parent="." instance=ExtResource("1_8rgng")]
-position = Vector2(-248, -15)
+position = Vector2(-241, -6)
+script = ExtResource("5_ksch6")
 
-[node name="Elud" type="RichTextLabel" parent="."]
-offset_left = 30.0
-offset_top = 33.0
-offset_right = 184.0
-offset_bottom = 73.0
-script = ExtResource("4_bt4qs")
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_syt8c")
 
-[node name="gameover" type="RichTextLabel" parent="."]
-offset_left = 478.0
-offset_top = 57.0
-offset_right = 789.0
-offset_bottom = 122.0
-script = ExtResource("5_20h8r")
+[node name="sein" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(380, 436.75)
+shape = SubResource("RectangleShape2D_cosqf")

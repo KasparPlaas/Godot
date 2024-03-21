@@ -1,19 +1,22 @@
 extends CharacterBody2D
 
+
 const kiirus = 500
 const kiirendus = 50
 const grav = 10
 const hyppa = -500
+
+
 
 func _physics_process(delta):
 	liikumine()
 	hyppamine()
 	gravitatsioon()
 	
-
+	
 func hyppamine():
-	var hyppamineInput = Input.is_action_pressed("Hyppa")
-	if is_on_floor() and hyppamineInput:
+	var hyppamine = Input.is_action_pressed("Hyppa")
+	if is_on_floor() and hyppamine:
 		$sprite.play("jump")
 		velocity.y = hyppa
 		

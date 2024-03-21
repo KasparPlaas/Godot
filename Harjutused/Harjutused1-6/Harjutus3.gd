@@ -9,7 +9,7 @@ func _ready():
 	var mangija_elud = 100
 	var arvuti_elud = 100
 	
-	while arvuti_elud >= 0:
+	while arvuti_elud > 0 && mangija_elud > 0:
 		var random1 = RandomNumberGenerator.new()
 		var random2 = RandomNumberGenerator.new()
 		var p1_dmg = random1.randi_range(8,15)

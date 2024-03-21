@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwcqgdj83kfaa"]
 
-[ext_resource type="Texture2D" uid="uid://6eb7qdjroomr" path="res://Taust/Summer7.png" id="1_3ubfr"]
+[ext_resource type="Texture2D" uid="uid://0i2ggvyb0obk" path="res://Taust/Summer7.png" id="1_3ubfr"]
 
 [node name="Taust" type="Node2D"]
 

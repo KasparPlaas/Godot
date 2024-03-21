@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://d1jr7yoxcjtpb"]
+[gd_scene load_steps=2 format=3 uid="uid://d1jr7yoxcjtpb"]
+
+[ext_resource type="Script" path="res://Harjutused1-6/Harjutus4.gd" id="1_415y5"]
 
 [node name="Harjutused1" type="Node2D"]
+script = ExtResource("1_415y5")

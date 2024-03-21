@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs02jihll1u4c"]
 
 [ext_resource type="Script" path="res://harjutus7/Harjutus7.gd" id="1_twebt"]
-[ext_resource type="Texture2D" uid="uid://m3ojvc4fi5ta" path="res://harjutus7/bg2.webp" id="2_8eyiu"]
+[ext_resource type="Texture2D" uid="uid://cgro5qnxlhcam" path="res://harjutus7/bg2.webp" id="2_8eyiu"]
 
 [sub_resource type="FontVariation" id="FontVariation_d2sxi"]
 
